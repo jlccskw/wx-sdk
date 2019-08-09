@@ -3,9 +3,9 @@ package login
 import (
 	"encoding/json"
 	"errors"
+	"github.com/jlccskw/wx-sdk/common"
+	"github.com/jlccskw/wx-sdk/utils"
 	"net/url"
-	"wx-sdk/common"
-	"wx-sdk/utils"
 )
 
 type (

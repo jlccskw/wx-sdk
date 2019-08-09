@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"wx-sdk/login"
+	"github.com/jlccskw/wx-sdk/login"
 )
 
 func main() {

@@ -11,6 +11,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/jlccskw/wx-sdk/common"
 	"io/ioutil"
 	"math/rand"
 	"net/http"
@@ -18,7 +19,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"wx-sdk/common"
 )
 
 // NewRequest 请求包装
