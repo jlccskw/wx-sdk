@@ -23,13 +23,16 @@ import (
 
 // NewRequest 请求包装
 func NewRequest(method, url string, data []byte) (body []byte, err error) {
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
 
 	if method == "GET" {
 		url = fmt.Sprint(url, "?", string(data))
 		data = nil
 	}
 
-	client := http.Client{}
+	client := http.Client{Transport: tr}
 	req, err := http.NewRequest(method, url, bytes.NewBuffer(data))
 	if err != nil {
 		return body, err
